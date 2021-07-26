@@ -1,0 +1,291 @@
+/*  main page  */
+
+.section__main {
+    padding-bottom: 120px;
+    min-height: 100vh;
+}
+
+.main__content {
+    margin-top: 90px;
+}
+
+.main__link {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all .3s;
+    bottom: 120px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.main__link:hover .arrow {
+    height: 63px;
+    transition: all .3s;
+}
+
+.main__link:active {
+    background: var(--white);
+    transition: all .3s;
+}
+
+.main__link:active .arrow,
+.main__link:active .arrow:before,
+.main__link:active .arrow:after {
+    background: var(--black);
+    transition: all .3s;
+}
+
+/*   gallery page   */
+
+.section__main_gallery {
+    height: auto;
+}
+
+.main__info {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__info-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main__info-left h4 {
+    color: var(--white);
+    font-weight: 600;
+}
+
+.main__info-right {
+    color: var(--white);
+    max-width: 60%;
+}
+
+/*  artist page  */
+
+.section__main_artist,
+.section__main_result {
+    height: auto;
+}
+
+.artist-info-descr__top {
+    margin: 60px 0 0 15%;
+}
+
+.main__artist-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.main__artist-info-descr {
+    max-width: 750px;
+    margin-right: 20px;
+}
+
+.artist-info-descr__top-inner {
+    padding: 15px 0 20px;
+    font-weight: 300;
+}
+
+.artist-info-descr__top-inner:first-child {
+    padding: 15px 0 20px;
+}
+
+.artist-info-descr__top-info,
+.artist-info-descr__mid {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.artist-info-descr__top-title {
+    font-size: 16px;
+    line-height: 16px;
+    margin-top: 7px;
+}
+
+.artist-info-descr__top-line {
+    width: 300px;
+}
+
+.artist-info-descr__top-line_sm {
+    width: 60px;
+}
+
+.artist-info-descr__mid {
+    margin-top: 60px;
+}
+
+.artist-info-descr__bot {
+    margin-top: 40px;
+}
+
+.artist-info-descr__bot-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 38px;
+    margin-bottom: 20px;
+}
+
+.artist-info-descr__bot-item:not(:first-child) {
+    margin-top: 30px;
+}
+
+.artist-info-descr__bot-item-year {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.artist-info-descr__bot-item-descr,
+.artist-info-descr__bot-item-descr-name {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.artist-info-descr__bot-item-descr:not(:first-child) {
+    margin-top: 10px;
+}
+
+.artist-info-descr__bot-item-line {
+    margin: 10px 0 15px;
+    max-width: 600px;
+}
+
+.main-painting__item-img-wrap {
+    max-width: 900px;
+}
+
+/*  result page  */
+
+.main__result-search {
+    width: 320px;
+    margin: 40px 0 0 15%;
+    letter-spacing: 0.03em;
+}
+
+.section__main_result .result-search__item {
+    width: 100%;
+}
+
+.section__main_result .painting__item:nth-child(odd) {
+    margin-left: 25%;
+}
+
+.section__main_result .painting__item:nth-child(even) {
+    margin-left: 50%;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .main__artist-info-descr {
+        max-width: 550px;
+    }
+
+    .section__main_result .painting__item:nth-child(odd) {
+        margin-left: 10%;
+    }
+
+    .section__main_result .painting__item:nth-child(even) {
+        margin-left: 40%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main__info-right,
+    .main__info-left h4 {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .main__artist-info {
+        flex-direction: column-reverse;
+    }
+
+    .main-painting__item-img-wrap,
+    .main__artist-info-descr {
+        max-width: 100%;
+    }
+
+    .section__main_result .painting__item:nth-child(even) {
+        margin-left: 31%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .main__info {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .main__info-right {
+        max-width: 100%;
+        margin-top: 30px;
+    }
+
+    .main__info-left h4:last-child {
+        margin-top: 20px;
+    }
+
+    .main__result-search {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .main__content {
+        margin-top: 40px;
+    }
+
+    .main__link {
+        width: 70px;
+        height: 70px;
+        bottom: 80px;
+    }
+
+    .main__link:hover .arrow {
+        height: 40px;
+    }
+
+    .main__info-right {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .main__info-left h4 {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .artist-info-descr__bot {
+        margin-top: 30px;
+    }
+
+    .section__painting_artist .section__main,
+    .section__main_artist {
+        padding-bottom: 20px;
+    }
+
+    .artist-info-descr__mid {
+        margin-top: 30px;
+    }
+
+    .artist-info-descr__top {
+        margin: 30px 0 0;
+    }
+
+    .artist-info-descr__top-line {
+        width: 100%;
+    }
+
+}

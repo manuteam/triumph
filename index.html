@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Development Area</title>
+
+    <!--  Fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!--    Main    -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!--  Variables  -->
+    <link rel="stylesheet" href="assets/css/vars.css">
+
+</head>
+<body>
+<style>
+    body {
+        font-family: Montserrat;
+    }
+    a {
+        font-family: Montserrat;
+        display: block;
+        color: #0072ff !important;
+        border: none !important;
+        padding: 2px 9px 2px 9px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        line-height: normal;
+        position: relative;
+        width: fit-content;
+        transition: .2s easy-in-out;
+    }
+
+    a:hover {
+        background: #e5f1ff;
+        text-decoration: none;
+    }
+
+    ul {
+        justify-content: unset;
+        list-style: none;
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        margin: 15px 15px;
+    }
+
+    .nav-block-flex {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .nav-block {
+        margin-top: 25px;
+    }
+
+    .offer-current_block {
+        width: 350px;
+        height: 150px;
+        background: #0D52FF;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        background: rgba(13, 82, 255, 0.70);
+        box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+        backdrop-filter: blur(2.5px);
+        -webkit-backdrop-filter: blur(2.5px);
+        border-radius: 10px;
+        position: absolute;
+        top: 25%;
+    }
+
+    .offer-current_bg {
+        width: 92px;
+        height: 150px;
+        background: url(assets/figma.png) no-repeat;
+        background-size: contain;
+        top: 41%;
+        position: relative;
+        left: -12%;
+        transform: translateX(0px);
+        opacity: 1;
+        transition: all 1s;
+    }
+
+    .offer-current_bg_wp {
+        width: 92px;
+        height: 150px;
+        background: url(assets/html.png) no-repeat;
+        background-size: contain;
+        top: 41%;
+        position: relative;
+        right: -12%;
+        transform: translateX(-20px);
+        opacity: 0;
+        transition: all 1s;
+    }
+
+    .offer-current {
+        position: relative;
+        width: 350px;
+        height: 207px;
+        top: 20%;
+        cursor: pointer;
+        display: flex;
+    }
+
+    .offer-current_text {
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .offer-current:hover .offer-current_bg {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+
+    .offer-current:hover .offer-current_bg_wp {
+        transform: translateX(170px);
+        opacity: 1;
+    }
+    a.not-active {
+        color: #7c7c7c !important;
+        text-decoration: none;
+    }
+</style>
+
+<div class="container nav-block-flex">
+    <div class="nav-block">
+        <nav>
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="poster.html">Poster</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery-second.html">Gallery-second</a></li>
+                <li><a href="artists.html">Artists</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="exhibitions.html">Exhibitions</a></li>
+                <li><a href="wave.html">Wave</a></li>
+                <li><a href="picture.html">Picture</a></li>
+                <li><a href="result.html">Result</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="nav-block">
+        <div class="offer-current">
+            <div class="offer-current_bg"></div>
+            <div class="offer-current_bg_wp"></div>
+            <div class="offer-current_block">
+                <div class="offer-current_text">OFFER: Figma to HTML</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

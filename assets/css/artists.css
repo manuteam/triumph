@@ -1,0 +1,217 @@
+/*   artists page    */
+
+.section__artists {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*  header  */
+
+.section__artists .header {
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+/*  artists__content    */
+
+.slick-list {
+    max-width: 95%;
+    margin: 0 auto !important;
+}
+
+/*  artists__content    */
+
+.artists__content {
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-bottom: 30px;
+}
+
+.artists__carousel {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.artists__item {
+    width: 560px;
+    margin: 0 20px;
+    outline: none;
+}
+
+.artists__carousel-btn {
+    position: absolute;
+    width: 20px;
+    height: 65px;
+    background: inherit;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40%;
+    cursor: pointer;
+    transition: all .3s;
+    outline: none;
+    z-index: 10;
+}
+
+.artists__carousel-btn:hover .arrow {
+    height: 63px;
+    transition: all .3s;
+}
+
+.artists__carousel-btn:active .arrow {
+    height: 14px;
+    transition: all .3s;
+}
+
+.artists__carousel-btn_left {
+    left: -20px;
+    transform: rotate(90deg);
+}
+
+.artists__carousel-btn_right {
+    right: -20px;
+    transform: rotate(-90deg);
+}
+
+.artists__item-name,
+.artists__item-name a {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.45;
+    color: var(--white);
+    margin-top: 20px;
+}
+
+.artists__item-name a {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*   exhibitions page    */
+
+.artists__carousel-progress-inner {
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+    position: relative;
+    margin: 15px 0 40px;
+}
+
+.artists__carousel-progress-inner-two {
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: -7px;
+}
+
+.carousel-progress-inner__point {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    box-shadow: 0 0 0 8px var(--black);
+    background: var(--black);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-progress-inner__point.active:after,
+.carousel-progress-inner__point:hover:after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+.artists__carousel-progress-year {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.bg-black .artists__carousel-progress-year {
+    color: var(--white);
+}
+
+.artists__item-time {
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--white);
+    margin-top: 15px;
+}
+
+.artists__item-img {
+    width: 560px;
+    height: 560px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .artists__item {
+        width: 350px;
+        margin: 0 20px;
+    }
+
+    .artists__item-img {
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+    }
+
+    .artists__item-name {
+        font-size: 20px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .section__artists .header,
+    .artists__content {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .artists__content {
+        margin: 0;
+    }
+
+    .artists__item {
+        width: 260px;
+        margin: 0 10px;
+    }
+
+    .artists__item-img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .artists__item-name {
+        font-size: 18px;
+        line-height: 18px;
+        margin-top: 15px;
+    }
+
+    .artists__item-time {
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 10px;
+    }
+
+    .artists__carousel {
+        margin-bottom: 20px;
+    }
+}

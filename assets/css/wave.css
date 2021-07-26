@@ -1,0 +1,305 @@
+/*   wave page   */
+
+.section__wave {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*   wave header   */
+
+.section__wave .header {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/*   / wave header   */
+
+.wave__content {
+    display: flex;
+    margin: 20px 0;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+/*.wave__content-left {
+    width: 45%;
+}*/
+
+.wave__content-left {
+    max-width: 600px;
+    width: 100%;
+}
+
+.wave__content-left-time {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.wave__content-left-time-value {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.wave__content-left-time-line {
+    height: 1px;
+    width: 40px;
+    background: var(--black);
+    margin: 0 15px;
+}
+
+.wave__content-left-mentor-wrap {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--black);
+    max-width: 300px;
+}
+
+.wave__content-left-title {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.wave__content-left-value {
+    font-size: 16px;
+    position: relative;
+    transition: all .3s;
+}
+
+.wave__content-left-participants-inner {
+    display: flex;
+}
+
+.wave__content-left-value:before {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    content: "";
+    background-color: inherit;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .2s ease-out;
+    bottom: -10px;
+}
+
+a.wave__content-left-value:hover:before {
+    visibility: visible;
+    transform: scale(1);
+    background-color: var(--black);
+}
+
+.wave__content-left-participants-inner-two:first-child {
+    margin-right: 100px;
+}
+
+/*    wave__content-right    */
+
+
+.wave__content-right {
+    margin-left: 20px;
+    width: 65%;
+}
+
+.wave__content-right-item-wrap:nth-child(even) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.wave__content-right-item-wrap:nth-child(odd) {
+    justify-content: start;
+}
+
+.wave__content-right-item-wrap {
+    margin: 0 30px;
+    outline: none;
+}
+
+.wave__content-right-item-wrap:nth-child(odd) .wave__content-right-item {
+    width: 600px;
+}
+
+.wave__content-right-item-wrap:nth-child(even) .wave__content-right-item {
+    width: 300px;
+}
+
+.wave__content-right-item-wrap:nth-child(3n+1) .wave__content-right-item {
+    margin-top: 150px;
+}
+
+.wave__content-right-item-wrap:nth-child(3n+2) .wave__content-right-item {
+    margin-top: 100px;
+}
+
+.wave__content-right-item-descr {
+    margin-top: 15px;
+}
+
+.wave__content-right-item-descr-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wave__content-right-item-title,
+.wave__content-right-item-title a {
+    font-size: 20px;
+    line-height: 1.45;
+    font-weight: 600;
+}
+
+.wave__content-right-item-title a {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.wave__content-right-item-settings-wrap {
+    position: relative;
+}
+
+.wave__content-right-item-settings {
+    cursor: pointer;
+}
+
+.wave__content-right-item-settings-wrap:hover .wave__content-right-item-settings-socials-wrap,
+.wave__content-right-item-settings-wrap:hover .wave__content-right-item-settings-socials-wrap {
+    display: flex;
+}
+
+.wave__content-right-item-settings-socials-wrap {
+    position: absolute;
+    border-top: 1px solid var(--black);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wave__content-right-item-settings-socials-img-wrap {
+    margin-top: 10px;
+    line-height: 5px;
+}
+
+.wave__content-right-item-settings-socials-img-wrap svg {
+    transition: all .3s;
+}
+
+.wave__content-right-item-settings-socials-img-wrap:hover svg {
+    fill: var(--grey);
+    transition: all .3s;
+}
+
+.wave__content-right-item-artist {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/*    wave slick slider    */
+
+.slick-list {
+    height: 100% !important;
+}
+
+@media screen and (max-width: 1400px) {
+
+    .wave__content-right-item-wrap:nth-child(odd) .wave__content-right-item {
+        width: 400px;
+    }
+
+    .wave__content-left-time-value {
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .section__wave {
+        height: auto;
+    }
+
+    .wave__content-left-time {
+        margin-bottom: 20px;
+        align-items: end;
+        flex-direction: column;
+    }
+
+    .wave__content-left-time .wave__content-left-time-line {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .wave__content-right-item-wrap:nth-child(n) .wave__content-right-item {
+        width: 300px;
+    }
+
+    .wave__content {
+        flex-direction: column;
+    }
+
+    .wave__content-left {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .wave__content-left-participants-inner {
+        flex-direction: column;
+    }
+
+    .wave__content-left-participants-inner-two:first-child,
+    .wave__content-right-item-wrap:nth-child(3n+1) .wave__content-right-item,
+    .wave__content-right-item-wrap:nth-child(3n+2) .wave__content-right-item {
+        margin: 0;
+    }
+
+    .wave__content-left-participants-inner-two {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .wave__content-left-participants-inner-two li:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .wave__content-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .wave__content-right-item-wrap:nth-child(n) .wave__content-right-item {
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .wave__content,
+    .section__wave .header {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .wave__content-left-time-value {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+    .wave__content-left-participants-inner-two {
+        flex-direction: column;
+    }
+
+    .wave__content-left-value {
+        font-size: 14px;
+    }
+
+    .wave__content-right-item-wrap:nth-child(n) .wave__content-right-item {
+        width: 220px;
+    }
+}
